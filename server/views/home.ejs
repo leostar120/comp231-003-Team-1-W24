@@ -1,7 +1,69 @@
 <link href="Styles.css" rel="stylesheet" type="text/css">
 <div class="home"></div>
-<!-- 
+<style>
+    .custom-container {
+        max-width: 1200px; /* Adjust the width as needed */
+        margin: 0 auto; /* Center the container on the page */
+        background-color: lightgray;
+        padding: 20px; /* Add some padding for spacing */
+    }
 
--->
+    .project-section {
+        display: flex;
+        flex-wrap: wrap; /* Allow projects to wrap to the next line on smaller screens */
+        justify-content: center;
+    }
+
+    .project {
+        text-align: center;
+        margin: 10px; /* Add some spacing between projects if desired */
+        width: 300px; /* Set a fixed width for each project card */
+    }
+
+    .project img {
+        width: 100%; /* Make images responsive within the project card */
+        max-height: 200px; /* Limit the maximum height of the images */
+    }
+
+    .project h3 {
+        color: black;
+    }
+
+    .project p {
+        color: black;
+        font-size: 18px;
+    }
+
+    .project a {
+        font-size: 20px;
+    }
+</style>
 </div>
+<section class="project-section">
+    <div class="project">
+        <img src="Assets/images/food1.jpeg" alt="Food Recipes!">
+        <h3>Food Recipes!</h3>
+        <p>Food Recipes!</p>
+        <a href="https://damndelicious.net/">View it here!!</a>
+    </div>
+    <div class="project">
+        <img src="Assets/images/food2.jpg" alt="Salads!">
+        <h3>Salads!</h3>
+        <p>Salads!</p>
+        <a href="https://www.delish.com/cooking/recipe-ideas/g2877/summer-salads/?utm_source=google&utm_medium=cpc&utm_campaign=arb_ga_del_md_pmx_hybd_mix_ca_18639947754&gad_source=1&gclid=CjwKCAjwnv-vBhBdEiwABCYQA-Qw2ZS1Nxdi8l9pqpQBLbOFbba0qKRr_kesJQ8TPlj7EsOve7TTPBoCXk0QAvD_BwE">View it here!!</a>
+    </div>
+    <div class="project">
+        <img src="Assets/images/food3.jpg" alt="Appetizers!">
+        <h3>Appetizers!</h3>
+        <p>Appetizers!.</p>
+        <a href="https://www.townandcountrymag.com/leisure/dining/g42828168/best-party-appetizers/?utm_source=google&utm_medium=cpc&utm_campaign=arb_ga_toc_d_bm_prog_org_usx_g42828168&gad_source=1&gclid=CjwKCAjwnv-vBhBdEiwABCYQAxJt8tuSeCE_Ls1ny5l2239exm1o7ymGhXBbw3AQ9PSmUgl0bMJt0xoCt5gQAvD_BwE">View it here!!</a>
+    </div>
+    <div class="project">
+        <img src="Assets/images/food4.jpg" alt="Desserts!">
+        <h3>Desserts!</h3>
+        <p>Desserts.</p>
+        <a href="https://bakegood.ca/recipes/desserts/?campaignid=20497979644&adgroupid=156387472281&keyword=&device=c&gad_source=1&gclid=CjwKCAjwnv-vBhBdEiwABCYQA46Ntpyevc0rIJz8fGjr_-Jo8gQDqZE1Cn9SYhRhpiNGGp3VkkqXHRoCo84QAvD_BwE">View it here!!</a>
+    </div>
+    <!-- Repeat the above block for each project -->
+</section>
 <p><a href="http://localhost:3500/">Back to Home</a></p>
