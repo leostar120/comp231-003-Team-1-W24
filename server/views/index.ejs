@@ -4,6 +4,7 @@
  
  
    <!-- Main Content -->
+<<<<<<< HEAD
    <main class="container">
      <div class="jumbotron">
        <!-- <h1 class="display-4">Welcome to the <%= title %> page</h1> -->
@@ -30,26 +31,35 @@
  
        <%} else if(title=="about" ) { %> 
          <%- include about %> 
+=======
+<main class="container">
+  <div class="jumbotron">
+      <h1 class="display-4">Welcome to the <%= title %> page</h1>
+      <style>
+          body {
+              background-image: url('Assets/images/cartking2.jpg');
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: cover;
+          }
+      </style>
+>>>>>>> e7ee42de04cf4f495b3783ec4859d47fd9a4224d
 
-             <%} else if(title=="contact" ) { %> 
-               <%- include contact %>            
-               
-               <%} else if(title=="login" ) { %> 
-                 <%- include login %> 
+      <!-- Conditional Page Loading-->
+      <% if(title=="home" ) { %>
+          <%- include home %>
+      <% } else if(title=="about" ) { %> 
+          <%- include about %> 
+      <% } else if(title=="contact" ) { %> 
+          <%- include contact %>            
+      <% } else if(title=="login" ) { %> 
+          <%- include login %> 
+      <% } %>
 
-                 
-                 <% } %>
- 
-                 
-                 <%- include partials/footer.ejs %>
-   </main>
-   
- <%- include partials/bottom_nav.ejs %>  
- 
- <%- include partials/footer.ejs %>
-   
- 
- 
- 
- 
- 
+      <%- include partials/footer.ejs %>
+  </div>
+</main>
+
+<%- include partials/bottom_nav.ejs %>
+
+<%- include partials/footer.ejs %>
