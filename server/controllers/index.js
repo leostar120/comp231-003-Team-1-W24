@@ -40,7 +40,7 @@ module.exports.displayListPage = (req, res, next) => {
 }
 
 module.exports.displayShoppingCart = (req, res, next) => {
-    res.render('index', {title: 'data', displayName: req.user ? req.user.displayName : ''});
+    res.render('index', {title: 'cart', displayName: req.user ? req.user.displayName : ''});
 }
 
 

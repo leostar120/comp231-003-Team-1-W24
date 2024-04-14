@@ -11,63 +11,38 @@
                     background-size: cover;
                 }
             </style>
-            <% if(typeof displayName == 'string' && displayName) { %>
-            <br>
-            <div class="text-center">
-                <a href="/data/add" class="btn btn-primary" role="button">
-                    <i class="fas fa-plus-circle"></i> Add Product
-                </a>
-            </div>
-            <% } %>
             <br>
             <table class="table table-bordered table-striped table-hover">
                 <!-- Header Row -->
                 <tr class="d-flex">
-                    <% if(typeof displayName == 'string' && displayName) { %>
                     <th class="text-center col-3">Item</th>
                     <th class="text-center col-2">Description</th>
                     <th class="text-center col-3">Price</th>
-                    <th class="text-center col-2"></th>
-                    <th class="text-center col-2"></th>
-                    <% } else {  %>
-                    <th class="text-center col-3">Item</th>
-                    <th class="text-center col-2">Description</th>
-                    <th class="text-center col-3">Price</th>
-                    <th class="text-center col-4">Link</th> <!-- Updated here -->
-                    <% } %>
+                    <th class="text-center col-2"></th> <!-- Added here -->
                 </tr>
        
                 <!-- Repeatable Template Row -->
                 <% for(let count=0; count <  productlist.length ; count++)  { %>
                 <%- console.log("Debug:", productlist[count]) %>
                 <tr class="d-flex">
-                    <% if(typeof displayName == 'string' && displayName) { %>
                     <td class="text-center col-3"><%= productlist[count].item %></td>
                     <td class="text-center col-2"><%= productlist[count].description %></td>
                     <td class="text-center col-3"><%= productlist[count].price %></td>
                     <td class="text-center col-2">
-                        <a href="/data/edit/<%= productlist[count]._id %>" class="btn btn-primary btn-sm">
-                            <i class="fas fa-pencil-alt"></i> Edit</a>
+                        <form action="/add-to-cart" method="POST">
+                            <input type="hidden" name="productId" value="<%= productlist[count]._id %>">
+                            <button type="submit" class="btn btn-success btn-sm">
+                                <i class="fas fa-cart-plus"></i> Add to Cart
+                            </button>
+                        </form>
                     </td>
-                    <td class="text-center col-2">
-                        <a href="/data/delete/<%= productlist[count]._id %>" class="btn btn-danger btn-sm">
-                            <i class="fas fa-trash-alt"></i> Delete</a>
-                    </td>
-                    <% } else { %>
-                    <td class="text-center col-3"><%= productlist[count].item %></td>
-                    <td class="text-center col-2"><%= productlist[count].description %></td>
-                    <td class="text-center col-3"><%= productlist[count].price %></td>
-                    <td class="text-center col-4">
-                        <a href="<%= productlist[count].link %>">https://www.foodbasics.ca/</a> <!-- Updated here -->
-                    </td>
-                    <% } %>
                 </tr>
                 <% } %>
             </table>
         </div>
     </div>
 </main>
-<p><a href="http://localhost:3500/">Back to Home</a></p>
+<p><a href="http://localhost:3500/shopping-cart">View Shopping Cart</a></p> <!-- Added here -->
 
 <%- include partials/bottom_nav.ejs %>  
 <%- include partials/footer.ejs %>

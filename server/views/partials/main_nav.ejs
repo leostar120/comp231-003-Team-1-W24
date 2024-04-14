@@ -10,7 +10,7 @@
 <!-- Navigation Bar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="/">
-    <img src="Assets/images/cartking.jpg" alt="team logo" height="50">COMP231</a>
+    <img src="Assets/images/cartking.jpg" alt="team logo" height="50">  Cart King </a>
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -32,23 +32,27 @@
       <% } %>
         <a class="nav-link" href="/about"><i class="fas fa-info-circle"></i> About </a>
       </li>
-
       <% if (title == "BusinessContact List") { %>
         <li class="nav-item active">
         <% } else  { %>
         <li class="nav-item">
         <% } %>
-          <a class="nav-link" href="/data"><i class="fa fa-cutlery" aria-hidden="true"></i> Product List </a>
+          <a class="nav-link" href="/data"><i class="fa fa-cutlery" aria-hidden="true"></i> Grocery </a>
         </li>
-
+        <% if (title == "BusinessContact List") { %>
+          <li class="nav-item active">
+          <% } else  { %>
+          <li class="nav-item">
+          <% } %>
+            <a class="nav-link" href="/community"><i class="fa fa-users" aria-hidden="true"></i> Community </a>
+          </li>
         <% if (title == "About") { %>
           <li class="nav-item active">
           <% } else  { %>
           <li class="nav-item">
           <% } %>
-            <a class="nav-link" href="/data"><i class="fa fa-shopping-cart" aria-hidden="true""></i> Shopping Cart </a>
-          </li>
-        
+            <a class="nav-link" href="/cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Shopping Cart </a>
+          </li>      
        <% if(typeof displayName == 'string' && displayName) { %>
         <li class="navbar-text"><i class="fas fa-lg fa-user"></i>Welcome, <%= displayName %></li>
         <li class="nav-item"><a href="/logout" class="nav-link">
@@ -57,6 +61,5 @@
         <li class="nav-item"><a href="/login" class="nav-link">
           <i class="fas fa-lg fa-sign-in-alt"></i> Login</a></li>
         <% } %>
-
   </div>
 </nav>
