@@ -1,7 +1,7 @@
 <link href="Styles.css" reel="stylesheet" type="text/css">
 <div class="home"></div>
 <style>
-    body {
+ body {
         font-family: Arial, sans-serif;
         background-color: #f5f5f5;
         margin: 0;
@@ -12,12 +12,16 @@
         max-width: 1200px;
         margin: 0 auto;
         padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    .content {
+        flex: 1;
     }
     
     .project-section {
-        display: flex;
-        
-        justify-content: center;
         margin-top: 100px;
     }
 
@@ -54,23 +58,35 @@
         text-decoration: underline;
     }
     
-    p{
+    p {
         text-align: center;
         color: black;
         margin-top: 200px;
     }
     
-    @media (max-width: 768px) {
-        .project {
-            width: calc(50% - 40px);
-        }
+    .image-container {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
+    
     </style>
+<div class="custom-container">
+    <div class="content">
+        <section class="project-section">
+            <div class="project">
+                <img src="Assets/images/food2.jpg" alt="Culinary Community">
+                <h3>Culinary Community</h3>
+                <a href="#">Meet your Culinary Family!!</a>
+            </div>
+        </section>
+        <p><a href="http://localhost:3500/">Link</a></p>
+    </div>
+    <div class="image-container">
+        <img src="Assets/images/community1.jpg" alt="gianphoto" width="500" height="500
+        ">
+    </div>
 </div>
-<section class="project-section">
-    <div class="project">
-        <img src="Assets/images/food2.jpg" alt="Culinary Community!">
-        <h3>Culinary Community</h3>
-        <a href="">Meet your Culinary Family!!</a>
-</section>
-<p><a href="http://localhost:3500/"></a></p>
+
+
