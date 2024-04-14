@@ -19,6 +19,9 @@ router.get('/projects', indexController.displayProjectsPage);
 /* GET Shopping Cart page */
 router.get('/cart', indexController.displayShoppingCart);
 
+/* GET Community  page */
+router.get('/community', indexController.displayShoppingCart);
+
 /* GET Services page. */
 router.get('/services', indexController.displayServicesPage);
 
