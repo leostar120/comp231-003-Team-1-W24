@@ -43,6 +43,10 @@ module.exports.displayShoppingCart = (req, res, next) => {
     res.render('index', {title: 'cart', displayName: req.user ? req.user.displayName : ''});
 }
 
+module.exports.displayCommunityPage = (req, res, next) => {
+    res.render('index', {title: 'community', displayName: req.user ? req.user.displayName : ''});
+}
+
 
 module.exports.displayLoginPage = (req, res, next) => {
     //check if the user is already logged in

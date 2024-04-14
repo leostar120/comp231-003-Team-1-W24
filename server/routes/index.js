@@ -20,7 +20,7 @@ router.get('/projects', indexController.displayProjectsPage);
 router.get('/cart', indexController.displayShoppingCart);
 
 /* GET Community  page */
-router.get('/community', indexController.displayShoppingCart);
+router.get('/community', indexController.displayCommunityPage);
 
 /* GET Services page. */
 router.get('/services', indexController.displayServicesPage);
