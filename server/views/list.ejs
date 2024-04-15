@@ -17,6 +17,7 @@
                 <tr class="d-flex">
                     <th class="text-center col-3">Item</th>
                     <th class="text-center col-2">Description</th>
+                    <th class="text-center col-2">Store</th>
                     <th class="text-center col-3">Price</th>
                     <th class="text-center col-2"></th> <!-- Added here -->
                 </tr>
@@ -27,6 +28,7 @@
                 <tr class="d-flex">
                     <td class="text-center col-3"><%= productlist[count].item %></td>
                     <td class="text-center col-2"><%= productlist[count].description %></td>
+                    <td class="text-center col-2"><%= productlist[count].store %></td>
                     <td class="text-center col-3"><%= productlist[count].price %></td>
                     <td class="text-center col-2">
                         <form action="/add-to-cart" method="POST">
